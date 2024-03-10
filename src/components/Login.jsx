@@ -14,7 +14,7 @@ const Login = () => {
             auth.loginAction(input);
             return;
         }
-        alert("please provide a valid input")''
+        alert("please provide a valid input");
     }
 
     const handleInput = (e) => {
