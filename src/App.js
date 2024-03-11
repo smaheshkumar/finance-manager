@@ -16,6 +16,9 @@ function App() {
               <Route element={<PrivateRoute />}>
                 <Route path="/dashboard" element={<Dashboard />} />
               </Route>
+              <Route element={<PrivateRoute />}>
+                <Route path="/" element={<Dashboard />} />
+              </Route>
               { /** Other routes */}
             </Routes>
           </header>
