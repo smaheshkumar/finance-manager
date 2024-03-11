@@ -32,7 +32,7 @@ const Login = () => {
                 <input
                     type='email'
                     id='user-email'
-                    name='email'
+                    name='username'
                     placeholder='example@mail.com'
                     aria-describedby='user-email'
                     aria-invalid='false'

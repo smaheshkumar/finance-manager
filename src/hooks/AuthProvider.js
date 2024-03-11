@@ -9,7 +9,7 @@ const AuthProvider = ({ children }) => {
     const navigate = useNavigate();
     const loginAction = async (data) => {
         try {
-            const response = await fetch("/auth/login", {
+            const response = await fetch("https://run.mocky.io/v3/ceacd3d3-4501-4566-a2cf-d60eb2bb934e", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -18,9 +18,10 @@ const AuthProvider = ({ children }) => {
             });
             const res = await response.json();
             if (res.data) {
-                setUser(res.data.user);
-                setToken(res.token);
-                localStorage.setItem('site', res.token);
+                console.log('res', res);
+                setUser(res.data);
+                setToken(res.data.sub);
+                localStorage.setItem('site', res.data.sub);
                 navigate("/dashboard");
                 return;
             }
